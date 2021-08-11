@@ -3,7 +3,7 @@ import pymysql
 # 전역변수 선언부
 con, cur = None, None
 data1, data2, data3, data4 = "", "", "", ""
-row=None
+sql=""
 
 #메인 코드
 conn = pymysql.connect(
@@ -18,9 +18,9 @@ while (True) :
     data1 = input("사용자 ID ==> ")
     if data1 == "" :
         break;
-    data2 = input["사용자 이름 ==> "]
-    data3 = input["사용자 출생연도 ==> "]
-    data4 = input["사용자 주소 ==> "]
+    data2 = input("사용자 이름 ==> ")
+    data3 = input("사용자 출생연도 ==> ")
+    data4 = input("사용자 주소 ==> ")
     sql = "insert into userTbl values(' " + data1 + " ',' " + data2 + " ',' " + data3 + " ',' " + data4 + ")"
     cur.execute(sql) #실행
 
